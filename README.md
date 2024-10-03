@@ -3,7 +3,7 @@ A simple AutoHotKey script for inputting class CRNs into MTU's BanWeb system.
 
 # Installation
 This program requires AutoHotKey **v1**, NOT v2.
-AutoHotKey: (https://www.autohotkey.com/)[https://www.autohotkey.com/]
+AutoHotKey: [https://www.autohotkey.com/](https://www.autohotkey.com/)
 
 # Usage
 First, Make sure all the correct class CRNs are included in the `crns` array of `crns.json`.
