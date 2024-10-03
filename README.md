@@ -10,3 +10,5 @@ First, Make sure all the correct class CRNs are included in the `crns` array of 
 (Note, you will need to create a new file called `crns.json`.)
 
 Then, once the AHK script has been started with v1, ensure the first text box is selected and use the keybind `Shift + n` to input the CRNs into the BanWeb text entries.
+
+Make sure to terminate the AHK script from the system tray!
