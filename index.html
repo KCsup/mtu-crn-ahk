@@ -2,11 +2,34 @@
 <body>
 <link rel="icon" href="data:,">
 
-<script src="index.js"></script>
+<script>
+const FORM_ID = "input_form";
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById(FORM_ID).addEventListener("submit", function(e) {
+        const crnsList = document.getElementById("crns_list")
+        crnsList.innerHTML = "";
+        for(let i = 0; i < this.elements.length; i++) {
+            let value = this.elements[i].value;
+            if(value) {
+              const newListItem = document.createElement("li");
+              newListItem.appendChild(document.createTextNode(value));
+              crnsList.appendChild(newListItem);
+            }
+        }
+
+        e.preventDefault();
+    });
+});
+
+const resetForm = () => {
+  document.getElementById(FORM_ID).reset();
+}
+</script>
 
 <h1>MTU CRN Macro Test</h1>
 
-<form id="test-form">
+<form id="input_form">
   <!-- 1 -->
   <input type="text">
   <!-- 2 -->
@@ -29,6 +52,13 @@
   <input type="text">
   <input type="submit">
 </form>
+
+<button onclick="resetForm()">Reset Form</button>
+
+<div id="crns">
+  <h2>Submitted Classes:</h2>
+  <ol id="crns_list" />
+</div>
 
 </body>
 </html>
